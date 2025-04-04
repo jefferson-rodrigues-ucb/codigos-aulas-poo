@@ -1,25 +1,24 @@
 package main.animais;
 
-public class Calopsita extends Passaro implements Domestico {
-    private String som;
-    public Calopsita(String nome, String corPena, String som) {
+public class Galinha extends Passaro implements Domestico {
+
+    public Galinha(String nome, String corPena) {
         super(nome, corPena);
-        this.som = som;
     }
 
     @Override
     public String fazerSom() {
-        return this.som;
+        return "Có Có";
     }
 
     @Override
     public void voar() {
-        System.out.println("Voa baixo");
+        System.out.println("Plana");
     }
 
     @Override
     public void comer() {
-        System.out.println("Semente de Girassol");
+        System.out.println("Comendo milho");
     }
 
     @Override

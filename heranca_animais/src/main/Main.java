@@ -2,6 +2,7 @@ package main;
 
 import main.animais.Calopsita;
 import main.animais.Pardal;
+import main.estruturas.Casa;
 
 import java.util.Scanner;
 
@@ -34,5 +35,11 @@ public class Main {
         System.out.println("Cor da Calopsita: " + cap2.getCorPena());
         System.out.println("Som que o " + cap2.getNome() + " faz: " +
                 cap2.fazerSom());
+
+        Casa casa = new  Casa();
+        casa.adicionarAnimal(cap1);
+        casa.adicionarAnimal(cap2);
+        //casa.adicionarAnimal(par1);
+        casa.mostrarAnimais();
     }
 }

@@ -1,6 +1,6 @@
 package main.animais;
 
-public class Animal {
+public abstract class Animal {
     private String nome;
 
     public Animal(String nome) {
@@ -11,7 +11,5 @@ public class Animal {
         return nome;
     }
 
-    public String fazerSom() {
-        return "...";
-    }
+    public abstract String fazerSom();
 }

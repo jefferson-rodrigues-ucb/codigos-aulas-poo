@@ -9,4 +9,9 @@ public class Pardal extends Passaro {
     public String fazerSom() {
         return "chirip";
     }
+
+    @Override
+    public void voar() {
+        System.out.println("Voando");
+    }
 }

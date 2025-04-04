@@ -1,6 +1,6 @@
 package main.animais;
 
-public class Passaro extends Animal{
+public abstract class Passaro extends Animal{
 
     private String corPena;
 
@@ -18,7 +18,13 @@ public class Passaro extends Animal{
         return "Piu";
     }
 
-    public void voar() {
-        System.out.println("Voando");
+    public abstract void voar();
+
+    @Override
+    public String toString() {
+        return "Nome: " + getNome() +
+                "\nCor Pena: " + getCorPena() +
+                "\n Som: " + fazerSom() +
+                "\nTipo de Ave: " + this.getClass().getSimpleName();
     }
 }
