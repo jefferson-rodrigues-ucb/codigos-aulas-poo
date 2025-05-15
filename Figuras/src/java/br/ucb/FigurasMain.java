@@ -10,13 +10,17 @@ public class FigurasMain {
         Triangulo triangulo = new Triangulo(3, 3, 4);
         exibir(quad);
         exibir(triangulo);
-        System.out.println("Área: " + triangulo.calcularArea(2F,
-                                        (float) Math.sqrt(5)));
     }
 
     public static void exibir(Figura figura) {
         System.out.println("Figura: " + figura.getClass().getSimpleName());
         System.out.println("Área: " + figura.calcularArea());
         System.out.println("Perímetro: " + figura.calcularPerimetro());
+
+        if (figura instanceof Triangulo) {
+            Triangulo triangulo = (Triangulo) figura;
+            System.out.println("Área: " + triangulo.calcularArea(2F,
+                    (float) Math.sqrt(5)));
+        }
     }
 }
